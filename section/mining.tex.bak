@@ -1,0 +1,75 @@
+\section{Phase I: Frequent Pattern Mining}\label{sec:mining}
+	We will discuss how to represent and mine the fps from songs. This task is a modification of the problem of mining sequential patterns, which was originally proposed by \cite{AS95}.
+	
+\subsection{Mining Frequent Patterns from songs}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\columnwidth]{figure/melodySegment.eps}
+\caption{A melody segment from a Mandarin song}
+\label{fig:melodySeg}
+\end{figure}
+\begin{CJK*}{UTF8}{zhsong}	
+	Figure \ref{fig:melodySeg} shows a segment of a melody which comes from a Mandarin song called ``huī zhe chì bǎng de nǚ hái (挥着翅膀的女孩)''.
+	A melody can be converted to a pitch sequence and a duration sequence. T-Music uses both ``the fps between the tone part and the pitch part'' AND ``the fps between the tone part and the duration part'' to compose melody. Since the technique of mining and using the former fps is similar to that for the later one, we omit the manipulation of the duration part.
+
+	Its pitches $<$ D5, D5, ..., F5$>$ are represented in letter names. By analysing the note distribution, we can know that this song is in Bb Major. Hence, it is $<$ mi5, mi5, fa5, so5, do5, ra5, mi5, mi5, mi5 ,fa5 ,so5 $>$ in Solfège representation.
+	The number next to the sofa name represents which octave the note is in.\footnote{An octave starts at a C note and ends at a B note.}
+	The tread of this sequence is $<$0, \textbf{1}, ..., 1$>$.
+The 1\textsuperscript{st} ``1'' indicates that the 3\textsuperscript{th} note is 1 sofa name higher than the 4\textsuperscript{th} note.
+
+	A tone number sequence can be obtained from the lyrics. According to Figure \ref{fig:cantoneseMandarinTones}, the 1\textsuperscript{st} tone is the highest tone, the 2\textsuperscript{nd} tone is the second highest tone and so on.\footnote{For simplicity, we perceive the neutral tone to have the second lowest pitch among the five tones. It is not the lowest because the 4\textsuperscript{th} tone changes from the highest pitch to the lowest pitch which gives us a strong perception that the 4\textsuperscript{th} tone is indeed the lowest tone.}
+	The relative tones is $<$5, 1, 3, 4, 5, 4, 1, 1, 2, 1, 3$>$. Its tone trend can be computed and the result is shown in Figure \ref{fig:melodySeg}.	
+\end{CJK*}
+
+	Given a song database $D$, we want to find out the fps of tone trends and pitch trends.
+	A \textit{p-pattern} $p$ consists of a tone trend $tt$ and a pitch trend $pt$, $p$ = ($tt$, $pt$). For example, ($<$1, 1$>$, $<$1, -4$>$) occurs one time and ($<$2$>$, $<$1$>$) occurs two times in the melody segment in Figure \ref{fig:melodySeg}.
+	If $p$ occurs not less than a threshold namely ``specific frequent threshold'' in a song $s$, $p$ is deemed to be specific frequent w.r.t. $s$.
+	If $p$ is specific frequent in not less than a threshold namely ``overall frequent threshold'' songs in $D$, $p$ is deemed to be overall frequent or frequent in short (w.r.t. $D$).
+	Our goal is to mine the frequent p-patterns (fp in short) from $D$. This task can be done by a frequent sequence mining algorithm~\cite{AFG+02}. The mining algorithm works efficiently on this kind of music data. It is because there are always some notes in the songs that are not associated with tones. The patterns that consist of non-continuous tone tread would not be further processed.
+	This method can be used for any languages, not just Mandarin.
+	
+\subsection{Mining Frequent Patterns from plain music}
+ 	Most of the music on the internet do not have lyrics embedded.
+	It encourages us to develop two methods to mine fps from plain music.
+
+\subsubsection{Method emphasizing the original fps}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\columnwidth]{figure/miningFPsFromPlainMusic1.pdf}
+\caption{Extract Existing Frequent Patterns Consistent with Frequent Pitch Trends mined from Plain Music}
+\label{fig:miningFPsFromPlainMusic1}
+\end{figure}
+	This method is shown in Figure \ref{fig:miningFPsFromPlainMusic1}.
+Fps are mined from songs and are stored in ``FP database (General)''.
+Since plain music do not contain lyrics, the original mining algorithm cannot mine anything from them. However, the frequent pitch trends can still be mined from them and are stored in ``Frequent pitch trends (Style)''.	
+	``Frequent pitch trends (Style)'' is used as a selector and it selects those fps in ``FP database (General)'' that have pitch tread appeared in the ``Frequent pitch trends (style)''. The selected fps are stored in ``FP database (Style)''
+	
+	For example, $a$ has pitch tread that is same as $\alpha$. Hence, $a$ is selected and is stored in ``FP database (Style)''.
+	$b$ has pitch tread that is not same as any pitch tread in ``Frequent pitch trends (Style)''. Hence, it is not selected.
+	
+	This method emphasizes the original fps in the sense that ``FP database (Style)'' is a subset of ``FP database (General)''.
+
+\subsubsection{Method emphasizing the newly mined frequent pitch trends}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\columnwidth]{figure/miningFPsFromPlainMusic2.pdf}
+\caption{Tone Filling for the new mined frequent pitch trends}
+\label{fig:miningFPsFromPlainMusic2}
+\end{figure}
+	This method is shown in Figure \ref{fig:miningFPsFromPlainMusic2}.
+The ``FP database (General)'' shown in Figure \ref{fig:miningFPsFromPlainMusic2} is indeed identical as that shown in Figure \ref{fig:miningFPsFromPlainMusic1}. The former one shows the shorter fps.
+According to the Apriori property, any subset of frequent itemset must be frequent. It implies that the pattern $p_1$ consists of a tone tread which is a subsequence of a tone tread of a frequent pattern $p_2$ and pitch tread which is also a subsequence of a pitch tread of $p_2$ is also frequent.
+$p_1$ is called sub-pattern of $p_2$.
+$a', b', ..., f'$ are the sub-patterns of $a, b, ..., d$.
+$a'', b'', ..., h''$ are the even shorter sub-patterns of $a, b, ..., d$.
+The frequent pitch treads are stored in ``Frequent pitch trends (Style)''.
+For each newly mined frequent pitch tread, we guess its corresponding tone trend based on ``FP database (Style)''to create a fp.
+
+For example, we guess the corresponding tone trend of $\alpha$ as follows.
+There is a fp namely $a$ that has pitch trend same as $\alpha$. Hence, we guess the corresponding tone trend of $\alpha$ is the tone trend of $a$.
+For $\gamma$, there is no fp that has the same pitch trend as $\gamma$.
+Hence, we try to construct $\gamma$ by concatenating the pitch trends of the shorter fps. We find that $\gamma$ can be formed by concatenating the pitch trends of $a''$, $c'$, and $g''$. We guess that the corresponding tone trend of $\gamma$ is a sequence concatenated from the tone trends of $a''$, $c'$, and $g''$.
+
+This method emphasizes the newly mined frequent pitch trends in the sense that ``FP database (Style)'' has the same size of ``Frequent pitch trends (Style)''.

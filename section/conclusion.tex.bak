@@ -1,0 +1,11 @@
+\section{Conclusion And Future Directions}\label{sec:conclusion}
+We have introduced a novel algorithmic composer called T-Music, which uses the correlations between melodies and lyrics to compose melody for the input lyrics.
+
+	Two new methods has been proposed to mine fps from plain music.
+	An optimal method of composing a melody for input lyrics in one language based on the fps in another language has been presented.
+
+	There are plenty of possibilities to further improve T-Music. For example, we may also consider to use the correlations between melodies and the syllables of lyrics to compose melody.
+	Besides, the number of notes in the generated melody is same as the number of tones in lyrics. If T-Music can generate a longer melody by introducing some notes that does not associate with any tones, there will be more variety of the melody.
+
+	This paper is a condensed form of a Master thesis~\cite{Y16}.
+

@@ -1,0 +1,173 @@
+% Encoding: UTF-8
+
+@MastersThesis{Y16,
+  author = {Coleman Yu},
+  title  = {A Melody Composer considering Genres for both Tonal and Non-Tonal Languages},
+  school = {Technology Leadership and Entrepreneurship, HKUST},
+  year   = {2016},
+}
+
+@MastersThesis{P15,
+  author = {Pakawadee Pengcharoen},
+  title  = {A powerful tool of composing melody for different languages},
+  school = {Electronic and Computer Engineering, HKUST},
+  year   = {2015},
+}
+
+@InProceedings{DAL+06,
+  author       = {Daylamani Zad, Damon and Araabi, Babak N and Lucas, Caru and others},
+  title        = {A novel approach to automatic music composing: Using genetic algorithm},
+  booktitle    = {International Computer Music Conference Proceedings},
+  year         = {2006},
+  volume       = {2006},
+  pages        = {551--555},
+  organization = {MPublishing, University of Michigan Library},
+}
+
+@InProceedings{KO14,
+  author       = {Kikuchi, Masashi and Osana, Yuko},
+  title        = {Automatic melody generation considering chord progression by genetic algorithm},
+  booktitle    = {Nature and Biologically Inspired Computing (NaBIC), 2014 Sixth World Congress on},
+  year         = {2014},
+  pages        = {190--195},
+  organization = {IEEE},
+}
+
+@Article{Po10,
+  author    = {Povel, Dirk-Jan and others},
+  title     = {Melody generator: A device for algorithmic music construction},
+  journal   = {Journal of Software Engineering and Applications},
+  year      = {2010},
+  volume    = {3},
+  number    = {07},
+  pages     = {683},
+  publisher = {Scientific Research Publishing},
+}
+
+@PhdThesis{Flynn01,
+  author = {Flynn, Choi Yeung Chang},
+  title  = {Intonation in Cantonese},
+  school = {University of London (School of Oriental and African Studies},
+  year   = {2001},
+}
+
+@Article{CT11,
+  author  = {Chu, Patrick Chun Kau and Taft, Marcus},
+  title   = {ARE THERE SIX OR NINE TONES IN CANTONESE?},
+  journal = {The Psycholinguistic Representation of Tone conference 2011 (PLRT 2011)},
+  year    = {2011},
+}
+
+@Article{FCM+08,
+  author    = {Francis, Alexander L and Ciocca, Valter and Ma, Lian and Fenn, Kimberly},
+  title     = {Perceptual learning of Cantonese lexical tones by tone and non-tone language speakers},
+  journal   = {Journal of Phonetics},
+  year      = {2008},
+  volume    = {36},
+  number    = {2},
+  pages     = {268--294},
+  publisher = {Elsevier},
+}
+
+@Article{LZ03,
+  author    = {Lee, Wai-Sum and Zee, Eric},
+  title     = {Standard Chinese (Beijing)},
+  journal   = {Journal of the International Phonetic Association},
+  year      = {2003},
+  volume    = {33},
+  number    = {01},
+  pages     = {109--112},
+  publisher = {Cambridge Univ Press},
+}
+
+@InProceedings{Wang04,
+  author    = {Wang, Jialing},
+  title     = {The neutral tone in trisyllabic sequences in Chinese dialects},
+  booktitle = {International Symposium on Tonal Aspects of Languages: With Emphasis on Tone Languages},
+  year      = {2004},
+}
+
+@InProceedings{LWS13,
+  author        = {Long, C. and Wong, R. C. W. and Sze, R. K. W.},
+  title         = {T-Music: A melody composer based on frequent pattern mining},
+  booktitle     = {2013 {IEEE} 29th International Conference on Data Engineering ({ICDE})},
+  pages         = {1332--1335},
+  __markedentry = {[Coleman:]},
+  abstract      = {There are a bulk of studies on proposing algorithms for composing the melody of a song automatically with algorithms, which is known as algorithmic composition. To the best of our knowledge, none of them took the lyric into consideration for melody composition. However, according to some recent studies, within a song, there usually exists a certain extent of correlation between its melody and its lyric. In this demonstration, we propose to utilize this type of correlation information for melody composition. Based on this idea, we design a new melody composition algorithm and develop a melody composer called T-Music which employs this composition algorithm.},
+  date          = {2013-04},
+  doi           = {10.1109/ICDE.2013.6544937},
+  eventtitle    = {2013 {IEEE} 29th International Conference on Data Engineering ({ICDE})},
+  file          = {IEEE Xplore Abstract Record:C\:\\Users\\Coleman\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\75beauzr.Coleman YU\\zotero\\storage\\IT9SMC3J\\6544937.html:text/html},
+  keywords      = {Algorithm design and analysis, algorithmic composition, Automata, Buildings, Correlation, correlation information, Databases, data mining, frequent pattern mining, melody composer, melody composition, melody composition algorithm, music, probabilistic automaton, Probabilistic logic, Stress, T-Music},
+  shorttitle    = {T-Music},
+}
+
+@InProceedings{LWS15,
+  author        = {Long, C. and Wong, R. C. W. and Sze, R. K. W.},
+  title         = {Trend-{MC}: A Melody Composer by Constructing from Frequent Trend-Based Patterns},
+  booktitle     = {2015 {IEEE} International Conference on Data Mining Workshop ({ICDMW})},
+  pages         = {1628--1631},
+  __markedentry = {[Coleman:6]},
+  abstract      = {Algorithmic composition refers to the process of composing a melody automatically using algorithms. A bulk of methods have been proposed for this task. Among them, a novel idea is to utilize the correlation information between the pitches of melodies and the tones of lyrics for melody composition. Unfortunately, the existing method adopting this idea suffers from several severe shortcomings and thus the merits of the above idea are not fully utilized. In this paper, we propose a new technique to capture the above correlation information based on the concepts of pitch trends and tone trends. Based on this technique, we design a new algorithm called Trend-{MC} for melody composition which avoids the shortcomings of the existing method. We also developed a software with the Trend-{MC} algorithm as its core. We demonstrate that the software could compose nice melodies with the input of lyrics.},
+  date          = {2015-11},
+  doi           = {10.1109/ICDMW.2015.165},
+  eventtitle    = {2015 {IEEE} International Conference on Data Mining Workshop ({ICDMW})},
+  file          = {IEEE Xplore Abstract Record:C\:\\Users\\Coleman\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\75beauzr.Coleman YU\\zotero\\storage\\DUDAVPZ8\\7395874.html:text/html},
+  keywords      = {Algorithm design and analysis, algorithmic composition, Conferences, Correlation, correlation information, Databases, Frequent pattern, frequent trend-based patterns, lyrics, Market research, melody composer, melody composition, Melody-lyric correlation, music, pitch trends, Software, Software algorithms, tone trends, Trend-{MC} algorithm},
+  shorttitle    = {Trend-{MC}},
+}
+
+@Article{Bozhanov14,
+  author       = {Bozhanov, Bozhidar},
+  title        = {Computoser - rule-based, probability-driven algorithmic music composition},
+  abstract     = {This paper presents the Computoser hybrid probability/rule based algorithm for music composition (http://computoser.com) and provides a reference implementation. It addresses the issues of unpleasantness and lack of variation exhibited by many existing approaches by combining the two methods (basing the parameters of the rules on data obtained from preliminary analysis). A sample of 500+ musical pieces was analyzed to derive probabilities for musical characteristics and events (e.g. scale, tempo, intervals). The algorithm was constructed to produce musical pieces using the derived probabilities combined with a large set of composition rules, which were obtained and structured after studying established composition practices. Generated pieces were published on the Computoser website where evaluation was performed by listeners. The feedback was positive (58.4\% approval), asserting the merits of the undertaken approach. The paper compares this hybrid approach to other approaches to algorithmic composition and presents a survey of the pleasantness of the resulting music.},
+  date         = {2014-12-09},
+  eprint       = {1412.3079},
+  eprinttype   = {arxiv},
+  file         = {arXiv\:1412.3079 PDF:C\:\\Users\\Coleman\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\2wghpe7k.default\\zotero\\storage\\NXHSMAM7\\Bozhanov - 2014 - Computoser - rule-based, probability-driven algori.pdf:application/pdf;arXiv.org Snapshot:C\:\\Users\\Coleman\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\2wghpe7k.default\\zotero\\storage\\VNVZNKS9\\1412.html:text/html},
+  journaltitle = {{arXiv}:1412.3079 [cs]},
+  keywords     = {Computer Science - Artificial Intelligence, Computer Science - Sound},
+  url          = {http://arxiv.org/abs/1412.3079},
+  urldate      = {2016-11-15},
+}
+
+@InProceedings{AS95,
+  author       = {Agrawal, Rakesh and Srikant, Ramakrishnan},
+  title        = {Mining sequential patterns},
+  booktitle    = {Data Engineering, 1995. Proceedings of the Eleventh International Conference on},
+  year         = {1995},
+  pages        = {3--14},
+  organization = {IEEE},
+}
+
+@Book{SA96,
+  title     = {Mining sequential patterns: Generalizations and performance improvements},
+  publisher = {Springer},
+  year      = {1996},
+  author    = {Srikant, Ramakrishnan and Agrawal, Rakesh},
+}
+
+@InProceedings{AFG+02,
+  author       = {Ayres, Jay and Flannick, Jason and Gehrke, Johannes and Yiu, Tomi},
+  title        = {Sequential pattern mining using a bitmap representation},
+  booktitle    = {Proceedings of the eighth ACM SIGKDD international conference on Knowledge discovery and data mining},
+  year         = {2002},
+  pages        = {429--435},
+  organization = {ACM},
+}
+
+@Book{LJ14,
+  title     = {A course in phonetics},
+  publisher = {Nelson Education},
+  year      = {2014},
+  author    = {Ladefoged, Peter and Johnson, Keith},
+}
+
+@Book{JS11,
+  title     = {Handbook of music and emotion: Theory, research, applications},
+  publisher = {Oxford University Press},
+  year      = {2011},
+  author    = {Juslin, Patrik N and Sloboda, John},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

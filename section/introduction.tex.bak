@@ -1,0 +1,67 @@
+\section{Introduction}\label{sec:introduction}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\columnwidth]{figure/engSong.eps}
+\caption{Melody returned by T-Music for English lyrics}
+\label{fig:engSong}
+\end{figure}	
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\columnwidth]{figure/mandSong.eps}
+\caption{Melody returned by T-Music for Mandarin lyrics}
+\label{fig:mandSong}
+\end{figure}	
+
+There are a lot of people in the world without any music background who would like to compose songs for their important people and days.
+We observed that people could use their languages for communication. We would like to have an algorithm which takes lyrics as input and returns a good melody in order to help people without any music background to compose songs.
+
+\begin{CJK*}{UTF8}{zhsong}	
+For the English speakers, they can input a lyric ``London Bridge is falling down'' to T-Music, T-Music will return a melody as shown in Figure \ref{fig:engSong}.
+For the Mandarin speakers, they can input a lyrics ``当我还是一个懵懂的女孩'' to T-Music, T-Music will return a melody as shown in Figure \ref{fig:mandSong}.
+The melody returned by T-Music can be sung together with the input lyrics.
+\end{CJK*}
+
+
+\subsection{Related Works}
+The study of using computer to compose melody is called artificial music composition or algorithmic composition.
+There are many approaches to tackle this problem such as symbolic rule-based systems, evolutionary algorithms.
+%
+To the best of our knowledge, \cite{LWS13} is the first study that includes the lyrics-note correlations in the composition.
+The lyrics-note correlation refers to the correlation between ``notes of melody'' and ``tones of lyrics''.
+We are interested in such correlations that occur frequently. They are called \textbf{f}requent \textbf{p}atterns (fps).
+
+\cite{LWS13} captures a fp by absolute pitches and absolute tones.
+\cite{LWS15} captures a fp by a pitch trend and a tone trend. Tread refers to the pairwise differences of the absolute sequence.
+%
+The ``trend'' representation is better than the ``absolute'' representation because same melodies which start at different pitches may sound similar to us.
+%
+\cite{P15} proposes the first attempt to compose a melody for the input lyrics in one language based on fps that are mined from songs in another language. It also incorporates T-Music a statistical music accompaniment generator.
+
+\subsection{System Architecture}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\columnwidth]{figure/tMusicArchitecture.eps}
+\caption{System Architecture of T-Music}
+\label{fig:tMusicArchitecture}
+\end{figure}	
+	Figure \ref{fig:tMusicArchitecture} shows the system architecture of T-Music. The system consists of two phases. They are ``Frequent Pattern Mining'' and ``Melody Composition''.
+
+	``Frequent Pattern Mining'' mines the fps from the song database and stores them in the FP database.
+	For each song, it contains lyrics and melody.
+	By reading the language dictionary, tone sequence of the lyrics can be obtained.
+	Melody consists of notes and a note consists of pitch and duration. Hence, melody can be treated as consisting the pitch sequence and the duration sequence.
+	A song can be represented by these three sequences. These three sentences are together called as a s-sequence.
+	Fps are mined from the s-sequences.
+
+	``Melody Composition'' composes melody for the tone sequence of the input lyrics based on the fps in the FP database. Some music rules such as harmonic rules are included in the process to ensure that the generated melody obeys the music rules and hence it is pleasant to human ears.
+
+	The main contributions of this paper are as follows.
+	
+The original T-Music can only mine fps from songs. Lyrics must be presence.
+However, plain music are more abundant than songs. Besides, the song files that are collected from the internet do not always have lyrics embedded. Finding corresponding lyrics and embedding the lyrics takes a long time.
+It is a shortcoming if we can only mine fps from songs. We will propose two methods that can find fps from plain music. Lyrics do not need to be presence.
+
+	 In other to use the fps mined from songs with lyrics in language $L_1$ for the input lyrics in language $L_2$, a tone mapping from $L_2$ to $L_1$ is required.
+	Random mapping of the tones in $L_2$ to that in $L_1$ can do the job. However, the random mapped tones for the input lyrics may not use the mined fps well. It encourages us to design a method that uses the FP database as reference and decides the mapping of the tones in $L_2$ to that in $L_1$ such that the mapped tones for the input lyrics can use the fps well. 

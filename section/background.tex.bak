@@ -1,0 +1,61 @@
+\section{Background}\label{sec:background}
+%TIPA:  A System for Processing Phonetic Symbols in LATEX
+%https://www.tug.org/TUGboat/tb17-2/tb51rei.pdf
+%
+%Typesetting pinyin finals
+%http://tex.stackexchange.com/questions/35051/typesetting-pinyin-finals
+%
+%How does one type Chinese in LaTeX?
+%http://tex.stackexchange.com/questions/17611/how-does-one-type-chinese-in-latex
+\begin{CJK*}{UTF8}{zhsong}
+Spoken Language is known as speech. Speech is a sequence of sounds that conveys a meaning.
+A \textit{syllable} is a basic unit in a speech.
+For example, in English, the phonetic of the word ``music'' contains two syllables.\footnote{Chinese phonetic is also called pinyin.} They are \textipa{[mju:]} and \textipa{[zIk]}.
+In Mandarin, the phonetic of the word ``音'' contains 1 syllable. It is [y\={\i}n].
+\end{CJK*}
+There is a mark on top of the i in [y\={\i}n]. It is a tone symbol. It tells us how to pronounce this syllable with correct tone.
+
+The languages can be classified as \textit{tonal} or \textit{non-tonal languages}. For both kinds of language, there are tone variations. Even in non-tonal languages, people do not speak in monotone!
+However, if someone speaks a sentence in monotone in English, others can still understand. The meaning of the sentence will not be ambiguous.
+In tonal languages, the tone of a word is important for distinguishing the word from another.
+	
+\subsection{Tonal Languages}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\columnwidth]{figure/cantoneseToneContours.pdf} % The canvas of the original eps is too large.
+\caption{Cantonese Tone Contours}
+\label{fig:cantoneseToneContours}
+\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\columnwidth]{figure/cantoneseMandarinTones.eps}
+\caption{The six Cantonese tones and the five Mandarin tones}
+\label{fig:cantoneseMandarinTones}
+\end{figure}	
+In English, a word ``men'' with phonetic \textipa{[men]} is different to another word ``man'' with phonetic \textipa{[m{\ae}n]} because they have different vowels \textipa{[e]} and \textipa{[\ae]}. Using different tones to pronounce them will not change their meanings.
+
+In Cantonese, which is a tonal language, a word conveys different meanings if it is pronounced in different tones. Cantonese has six tones~\cite{CT11}.
+Figure \ref{fig:cantoneseToneContours} shows the six tones and meanings of a word [si] if it is pronounced in these six tones. It is modified from \cite{FCM+08}.
+	We can also represent a tone contour by a tone digit. For example, the 1\textsuperscript{st} tone in Cantonese starts and ends at almost the highest pitch. By setting the highest pitch as 5 and the lowest pitch as 1. The tone digit of the 1\textsuperscript{st} tone is 55. The tone digits of the remaining five tones are 25, 33, 21, 23 and 22~\cite{Flynn01}.
+	It is shown in Figure \ref{fig:cantoneseMandarinTones}.
+\begin{CJK*}{UTF8}{zhsong}		
+
+	Mandarin has four formal tones. They are 55, 35, 214 and 51~\cite{LZ03}.  There is a special tone called \textit{neutral tone} in Mandarin.\footnote{In Chinese, it is called ``qīng shēng (輕聲)'', which literally means ``light tone''.}
+	When a syllable is associated with it, the syllable is pronounced shorter and unstressed. It is not considerered as a formal tone because the pitch value of it is determined by the tone of the preceding syllable~\cite{Wang04}. The five tones (including the natural tone) are shown in Figure \ref{fig:cantoneseMandarinTones}.
+\end{CJK*}
+
+\subsection{Non-Tonal Languages}
+	In English, which is a non-tonal language, has three kinds of stress, namely the primary stress, the secondary stress and the non-stress. Consider a word ``education'', which have four syllables \textipa{[e-j@-kA-sh@n]}, we will stress on the \textipa{[kA]}, stress lightly on \textipa{[e]} and non-stress on \textipa{[j@]} and \textipa{[sh@n]}. These three stresses can be treated as three tones.
+	
+	In Japanese, which is also a non-tonal language, has two kinds of stress. They can be treated as two tones.
+
+\subsection{Summary}
+	Given a word, we can obtain its (syllable, tone) sequence by reading dictionary. We are only interested in the tone part but not the syllable part.
+	For the input lyrics, we can obtain a sequence of consisted words by applying word segmentation.\footnote{Word segmentation is a trivial task for English because the words in a English sentence are separated by a space. For other languages, it can be a difficult task. For example, Thai, as there is no inter-word spacing.}
+	We can compute a tone sequence for the input lyrics.
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+\section{Considering Genres based on Music Theory}\label{sec:genres}
+	Musical factors contribute to the perceived music emotion.
+	
+	Major scale may be associated with happiness, joy, graceful, serene and solemn while minor scale may be associated with sadness, dreamy, dignified, tension, disgust and anger~\cite{JS11}. It suggests that major scale may be used to generate a happy melody.
+	T-Music can generate melody in different scales in addition to ordinary major/minor scale.
+	To generate melody with oriental style, major pentatonic scale should be used. It is obtained by omitting the 4\textsuperscript{th} (fa) and the 7\textsuperscript{th} (ti) notes in the corresponding major scale. The separation between the adjacent notes in the scale is $<$2, 2, 3, 2, 3$>$.  
+	A video of composing melody in major pentatonic scale is available at \url{www.cse.ust.hk/~testing}.
+		
+	Fast tempo may induce excitement, happiness, potency, surprise, flippancy, anger and fear while slow tempo may induce calmness, peace, sadness, dignity, tenderness, longing, boredom and disgust~\cite{JS11}. 
+	The tempo that equals or greater than 108 bpm is considered as fast.
+	If a melody is played in a tempo that falls into ``Presto (168-208 bpm)'', it is considered as fast and likely to expresses happiness.
+		
+	Vocal range is the measure of the breath of pitches that a human voice can produce. High pitch ranges may express happy, graceful, serene, dreamy and exciting while low pitch ranges may express sadness, dignity, solemnity, vigour and excitement \cite{JS11}. 
+	T-Music can shift the melody sentence by sentence so that the whole melody falls into the chosen vocal range such as ``Soprano (C4-C6)'', which is a high pitch range.
+	
+	Harmony refers to the ``vertical'' relationship between simultaneous pitches.
+	Consonant harmony may represent happy, relaxed, graceful, serene, dreamy, dignified, serious and majestic while dissonant harmony may represent excitement, tension, vigour, anger, sadness and unpleasantness~\cite{JS11}.
+	Intervals with half step equal to 1 (m2), 2 (M2), 6 (A4/d5), 10 (m7), 11 (M7) are considered to be dissonant intervals.
+	For a happy song, the consonant intervals in the melody should be maximized.
+	To achieve this, the retrieved ($pt$, $\tau$) tuples are sorted in descending order by the number of consonant intervals that the resulting melody based on $pt$ would have.
+	
+	Melody direction describes the tread of the notes. 
+	Ascending melody may represent dignity, serenity, tension and happiness while descending melody may represent exciting, graceful, vigorous and sadness~\cite{JS11}. 
+	A dignity melody should consist of more ascending treads. 
+	To achieve this, the corresponding ($pt$, $\tau$) tuples are sorted in descending order by the vertical distance that $pt$ has ``climbed up''.
+	
+	Large pitch variation may be associated with happiness, pleasantness, activity and prise while small pitch variation may be associated with disgust, anger, fear and boredom~\cite{JS11}.\footnote{The association of ``Small pitch variation'' with anger and fear is controversial.}
+	If we want to generate a melody with small pitch variations, ($pt$, $\tau$) is sorted in ascending order by the summation of the absolute value of the entries in $pt$. 
+	
+	Hevner's summary states how to use factors (including scale, tempo, vocal range, rhythm, harmony, melody direction) simultaneously for a specific perceived emotion~\cite{JS11}.\footnote{Since the definition of rhythm is not quantitative, it will not be used.} 
+	For example, it states that emotion ``dignified-solemn'' should be in minor scale, slow tempo, low pitch range, firm rhythm, simple harmony and ascending melody.
+	Besides, we can also mine rules from songs. For example, we can mine the distributions of major/minor, key signature, tempo range and vocal range from a song database and uses these distributions to compose melody that should be in similar style with the song database.	
