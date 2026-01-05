@@ -1,0 +1,33 @@
+> Reviewer 1:
+> -------------
+> A good discussion of issues related to melody generation with Cantonese lyrics. Some of the issues are not clearly presented however (especially the discussion of tone digits) and it's unclear if the software has been used to create musical works. Would also benefit from code samples, if possible, of the mapping techniques. Nevertheless, the analysis and mapping techniques presented will be of interest to conference delegates.
+>
+> My Reply
+> -------------
+> I think we cannot disclose the source code.
+> Originally, I think maybe we can include the pseudo code (adopted from my thesis) as Appendix in the paper. I have sent an email to the conference committee for asking whether it is allowed 4 days ago. But they has not replied yet.
+>
+> 2
+> ^^^^^
+> Reviewer 2:
+> -------------
+> I do appreciate these attempts, however a composition / song with emotional impact on humans has more to do with artistic aspects and context/culture awareness than with statistics. A better way to compose striking songs is to understand the language of music, statistics are not the way to get there. I would be interesting to research to what extent statistics match human appreciation.
+>
+> My Reply
+> -------------
+> This problem cannot be solved. The reviewer simply do not agree with the possibility that computer can generate good music. However, I think we may mention in the introduction that “T-Music” is not created to replace human composer. But created as a aid or tool-kit to facilitate the composition procedure.
+>
+> 3
+> ^^^^^
+> Reviewer 3:
+> -------------
+> Thank you for this study. This is indeed a novel area of study. I have not heard of an algorithmic composition system that employs the lyrics of songs.
+> A few small notes. Don’t start a sentence with a citation. For example: [1] captured an fp by absoute…
+> Perhaps throughout your paper when referring to to music without words call them “instrumental compositions” instead of “plain music”
+> Section 4.1 and 4.2 I found a bit long. Perhaps they could be shortened or broken into smaller sections.
+>
+> My Reply
+> -------------
+>
+> If I try to further divide Section 4.1 (4.2) into sub-sections, the article will exceed the page limit.
+> I have highlighted some sentences that I think they are removable as red.
