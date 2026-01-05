@@ -31,3 +31,14 @@
 >
 > If I try to further divide Section 4.1 (4.2) into sub-sections, the article will exceed the page limit.
 > I have highlighted some sentences that I think they are removable as red.
+
+Questions asked during the conference
+==========================================================================
+>> There are 2 persons asking me questions.
+>> The first one was asking how to set the length of the fp.
+>> I answered that the length of it cannot be too long.
+>> Otherwise, it may have a "copy-cat" issue.
+>> The second one was asked by the session in charge.
+>> He asks me whether this work is inspired by someone called "clarence barlow".
+>> He said that guy is doing research on tonal language about music.
+==========================================================================
