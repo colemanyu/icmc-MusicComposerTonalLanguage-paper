@@ -6,4 +6,4 @@ the 43rd International Computer Music Conference 2017, Shanghai, China on 16-20 
 ### Remarks
 - This source code could not be compiled on Overleaf. Tested on 7 Dec 2025.
 - 2017-06-16: Accepted by [ICMC 2017](http://www.icmc2017.com) ([Wayback](https://web.archive.org/web/20180829154519/http://www.icmc2017.com/en/index.html))
-  - [Review Reports](https://github.com/colemanyu/icmc-MusicComposerTonalLanguage-paper/blob/main/review-reports/review-reports-with-replies.txt)
+  - [Review Reports and Comments received during the conference](https://github.com/colemanyu/icmc-MusicComposerTonalLanguage-paper/blob/main/review-reports/review-reports-with-replies.txt)
